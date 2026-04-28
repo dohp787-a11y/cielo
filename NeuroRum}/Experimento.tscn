@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://8e8yptjt48u8"]
+
+[ext_resource type="Script" uid="uid://cimfswub7m5cg" path="res://sprite_2d.gd" id="1_dfbpx"]
+
+[node name="Node" type="Node" unique_id=2097806792]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1824906353]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=925068094]
+position = Vector2(13, 0)
+script = ExtResource("1_dfbpx")
+metadata/personaje1 = true
+
+[node name="Label(Pregunta)" type="Label" parent="Node2D/Sprite2D" unique_id=1036548701]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label(Puntaje)" type="Label" parent="Node2D/Sprite2D/Label(Pregunta)" unique_id=410222293]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Sprite2D/Label(Pregunta)/Label(Puntaje)" unique_id=364127438]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D/Sprite2D/Label(Pregunta)/Label(Puntaje)/CollisionShape2D" unique_id=953302129]

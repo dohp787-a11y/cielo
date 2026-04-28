@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://btp31ja2popow"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=213459226]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=876327357]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=921247442]
