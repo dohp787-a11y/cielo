@@ -1,14 +1,14 @@
 extends Area2D
-onready var Lainfo = $"TextodeInteracción"
+onready var Lainfo = $preg1
 
 
 func _ready():
 	print("READY FUNCIONANDO")
-	# print(Lainfo)
-	Lainfo.hide()
-func _on_InfoLetr_body_entered(_body): 
-	Lainfo.show()
-	
+	Lainfo.visible = false
 
-func _on_InfoLetr_body_exited(_body):
+func _on_InfoLetr_body_entered(body): 
+	Lainfo.show()
+
+func _on_InfoLetr_body_exited(body):
 	Lainfo.hide()
+	pass

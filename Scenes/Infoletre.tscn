@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="letrero" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="InfoLetr" type="Area2D" parent="."]
 script = ExtResource( 2 )
@@ -17,8 +17,7 @@ texture = ExtResource( 1 )
 position = Vector2( 0, 6 )
 shape = SubResource( 1 )
 
-[node name="TextodeInteracción" type="Label" parent="InfoLetr"]
-visible = false
+[node name="preg1" type="Label" parent="InfoLetr"]
 margin_left = -97.0
 margin_top = -19.0
 margin_right = 106.0
@@ -27,5 +26,3 @@ text = "¿Cuál es la capital del Paraguay?"
 
 [connection signal="body_entered" from="InfoLetr" to="InfoLetr" method="_on_InfoLetr_body_entered"]
 [connection signal="body_exited" from="InfoLetr" to="InfoLetr" method="_on_InfoLetr_body_exited"]
-[connection signal="ready" from="InfoLetr/TextodeInteracción" to="InfoLetr" method="_on_TextodeInteraccin_ready"]
-[connection signal="ready" from="InfoLetr/TextodeInteracción" to="InfoLetr" method="_on_Label_ready"]

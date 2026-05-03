@@ -17,7 +17,7 @@ texture = ExtResource( 1 )
 position = Vector2( 0, 7 )
 shape = SubResource( 1 )
 
-[node name="Label" type="Label" parent="infoletre"]
+[node name="Bienv" type="Label" parent="infoletre"]
 margin_left = -36.0
 margin_top = -21.0
 margin_right = 36.0
