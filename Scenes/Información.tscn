@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fondo.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Información.gd" type="Script" id=2]
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.647059, 0.631373, 0.631373, 0.619608 )
+
+[node name="Info" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -8.0
+margin_top = 2.0
+margin_right = -1.0
+margin_bottom = 7.0
+script = ExtResource( 2 )
+
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 527, 304 )
+scale = Vector2( 0.581736, 0.684329 )
+texture = ExtResource( 1 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+margin_left = 814.0
+margin_top = 477.0
+margin_right = 1014.0
+margin_bottom = 497.0
+
+[node name="Continuar" type="Button" parent="VBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "Continuar"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.101
+anchor_top = 0.967
+anchor_right = 0.101
+anchor_bottom = 0.967
+margin_left = -89.424
+margin_top = -107.2
+margin_right = 110.576
+margin_bottom = -80.2001
+
+[node name="Salir" type="Button" parent="VBoxContainer"]
+margin_right = 200.0
+margin_bottom = 20.0
+text = "Salir"
+
+[node name="Historia" type="Node2D" parent="."]
+script = SubResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Historia"]
+margin_left = 249.0
+margin_top = 152.0
+margin_right = 816.0
+margin_bottom = 389.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_styles/normal = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] [color=black]Historia[/color] [/center]
+Piropín es un estudiante del Colegio Arq. Tomás Romero que, al sentir que le costaba aprender, decide entrar a la \"Red Neuronal\", un simulador virtual de desafíos. En este mundo tipo Subway Surfers, corre sin descanso para superar sus propios límites, esquivando dudas y respondiendo trivias para fortalecer su mente. Su aventura en NeuroRun demuestra que no hace falta ser un genio para empezar, sino tener la valentía de aprender algo nuevo en cada kilómetro."
+visible_characters = 128000
+tab_size = 5
+text = " Historia 
+Piropín es un estudiante del Colegio Arq. Tomás Romero que, al sentir que le costaba aprender, decide entrar a la \"Red Neuronal\", un simulador virtual de desafíos. En este mundo tipo Subway Surfers, corre sin descanso para superar sus propios límites, esquivando dudas y respondiendo trivias para fortalecer su mente. Su aventura en NeuroRun demuestra que no hace falta ser un genio para empezar, sino tener la valentía de aprender algo nuevo en cada kilómetro."
+
+[connection signal="pressed" from="VBoxContainer2/Continuar" to="." method="_on_Continuar_pressed"]
+[connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_Salir_pressed"]
